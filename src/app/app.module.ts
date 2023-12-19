@@ -18,10 +18,19 @@ import { UserRegistrationFormComponent } from './user-registration-form/user-reg
 import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { ProfileUpdateFormComponent } from './profile-update-form/profile-update-form.component';
+import { MoviePageComponent } from './movie-page/movie-page.component';
+import { GenreDialogComponent } from './genre-dialog/genre-dialog.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { DirectorDialogComponent } from './director-dialog/director-dialog.component';
+import { SynopsisDialogComponent } from './synopsis-dialog/synopsis-dialog.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
   { path: 'movies', component: MovieCardComponent },
+  { path: 'profile', component: ProfilePageComponent},
+  { path: 'movie/:Title', component: MoviePageComponent },
   { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
 ];
 
@@ -31,7 +40,13 @@ const appRoutes: Routes = [
     UserRegistrationFormComponent,
     UserLoginFormComponent,
     MovieCardComponent,
-    WelcomePageComponent
+    WelcomePageComponent,
+    ProfilePageComponent,
+    ProfileUpdateFormComponent,
+    MoviePageComponent,
+    GenreDialogComponent,
+    DirectorDialogComponent,
+    SynopsisDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +55,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    FlexLayoutModule,
     MatDialogModule,
     MatButtonModule,
     MatIconModule,
