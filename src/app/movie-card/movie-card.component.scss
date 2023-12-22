@@ -1,8 +1,22 @@
 .content {
   padding: 16px;
+  background-color: black;
 }
 
 .content > mat-card {
   width: 200px;
 }
+
+mat-card-header {
+  background-color: #ffd700;
+  border-radius: 20px;
+}
+
+mat-card {
+  border-radius: 20px;
+  background-color: #ffd700;
+}
+
+
+
 

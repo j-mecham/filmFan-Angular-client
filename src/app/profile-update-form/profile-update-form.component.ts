@@ -49,8 +49,7 @@ export class ProfileUpdateFormComponent {
       this.snackBar.open(result, 'OK', {
         duration: 2000
       });
-      this.router.navigate(['movies']);
-      this.router.navigate(['profile']);
+      window.location.reload();
     }, (result) => {
       console.log(result);
       this.snackBar.open(result, 'OK', {

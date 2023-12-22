@@ -1,4 +1,5 @@
 <!-- src/app/movie-card/movie-card.component.html -->
+<app-navbar></app-navbar>
 <div class="content">
     <div fxLayout="row wrap" fxLayoutGap="16px grid">
         <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let movie of movies;">
@@ -12,30 +13,30 @@
                     alt= {{movie.Title}} 
                     (click)="goToMovie(movie.Title)"
                 />
-                <mat-card-actions>
+                <mat-card-actions fxLayout="row wrap">
                     <button
                         mat-button
-                        color="primary"
+                        color="basic"
                         (click)="openGenreDialog(movie.Genre)"
                     >
                         Genre
                     </button>
                     <button
                         mat-button
-                        color="primary"
+                        color="basic"
                         (click)="openDirectorDialog(movie.Director)"
                     >
                         Director
                     </button>
                     <button
                         mat-button
-                        color="primary"
+                        color="basic"
                         (click)="openSynopsisDialog(movie.Description)"
                     >
                         Synopsis
                     </button>
-                    <mat-icon *ngIf="isFavorite(movie._id)" (click)="deleteFavorite(movie._id)" color="primary">favorite</mat-icon>
-                    <mat-icon *ngIf="!isFavorite(movie._id)" (click)="addFavorite(movie._id)" color="primary">favorite_border</mat-icon>
+                    <mat-icon *ngIf="isFavorite(movie._id)" (click)="deleteFavorite(movie._id)" color="basic">favorite</mat-icon>
+                    <mat-icon *ngIf="!isFavorite(movie._id)" (click)="addFavorite(movie._id)" color="basic">favorite_border</mat-icon>
                 </mat-card-actions>
             </mat-card>
         </div>

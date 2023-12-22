@@ -25,6 +25,8 @@ import { GenreDialogComponent } from './genre-dialog/genre-dialog.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DirectorDialogComponent } from './director-dialog/director-dialog.component';
 import { SynopsisDialogComponent } from './synopsis-dialog/synopsis-dialog.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -46,7 +48,8 @@ const appRoutes: Routes = [
     MoviePageComponent,
     GenreDialogComponent,
     DirectorDialogComponent,
-    SynopsisDialogComponent
+    SynopsisDialogComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +65,8 @@ const appRoutes: Routes = [
     MatInputModule,
     MatCardModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
