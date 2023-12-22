@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<div class="cover">
+    <img src={{movie.ImagePath}} alt= {{movie.Title}} />
+</div>
+<div class="info">
+    <h1>{{movie.Title}}</h1>
+    <h3>Synopsis:</h3>
+    <p>{{movie.Description}}</p>
+    <h3>Directed By:</h3>
+    <p>{{movie.Director.Name}}</p>
+    <h3>Genre:</h3>
+    <p>{{movie.Genre.Name}}</p>
+    <h3>Release Year:</h3>
+    <p>{{movie.Release_Year}}</p>
+    <h3>Main Cast:</h3>
+    <p>{{movie.Actors.join(', ')}}</p>
+</div>

@@ -1,0 +1,58 @@
+<app-navbar></app-navbar>
+<div class="entire">
+    <div class="main">
+        <mat-card class="userInfo">
+            <mat-card-header>
+                <mat-card-title><h2>Your Profile:</h2></mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>Username: {{user.Username}}</p>
+                <p>Email: {{user.Email}}</p>
+                <p>Birthday: {{user.Birthday | date: 'MM-dd-yyyy'}}</p>
+            </mat-card-content>
+            <mat-card-actions align="end">
+                <button 
+                    mat-stroked-button
+                    (click)="openUserUpdateDialog()"
+                    color="primary"
+                >
+                    Update
+                </button>
+                <button 
+                    mat-stroked-button 
+                    (click)="deleteCurrentUser()" 
+                    color="warn" 
+                    class="delete"
+                    
+                >
+                    Delete Account
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+
+    <div *ngIf="hasMovies">
+        <h1>Favorite Movies:</h1>
+
+    </div>
+
+    <div *ngIf="hasMovies">
+        <div class="content">
+            <div fxLayout="row wrap" fxLayoutGap="16px grid">
+                <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let favorite of favorites;">
+                    <mat-card >
+                        <mat-card-header>
+                        <mat-card-title>{{favorite.Title}}</mat-card-title>
+                            <mat-card-subtitle>Directed by: {{favorite.Director.Name}}</mat-card-subtitle>
+                        </mat-card-header>
+                        <img 
+                            src={{favorite.ImagePath}} 
+                            alt= {{favorite.Title}} 
+                            (click)="goToMovie(favorite.Title)"
+                        />
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
