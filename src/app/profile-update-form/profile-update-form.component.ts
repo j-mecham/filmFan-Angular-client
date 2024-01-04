@@ -37,7 +37,9 @@ export class ProfileUpdateFormComponent {
     this.user = JSON.parse(userData);
     }
 
-  //This function is responsible for sending the form inputs to the backend
+  /**
+   * @description Sends the form inputs to the backend.
+   */
   updateUser(): void {
     this.fetchApiData.editUser(this.userInput).subscribe((result) => {
       localStorage.setItem('user', JSON.stringify(result));

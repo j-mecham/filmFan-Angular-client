@@ -27,6 +27,10 @@ export class ProfilePageComponent {
     this.getFavMovies();
   }
 
+  /**
+   * @description Gets favorite movies with FetchApiDataService.
+   * @returns list of favorite movies.
+   */
   public getFavMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
         this.movies = resp;
@@ -41,6 +45,10 @@ export class ProfilePageComponent {
       });
     }
 
+  /**
+   * @description Navigates to movie's page.
+   * @param {string} title - title of the movie.
+   */
   goToMovie(title: string): void {
     this.router.navigate(['movie/', title]);
     console.log("clicked")
