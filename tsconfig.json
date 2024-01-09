@@ -34,4 +34,4 @@
     "entryPoints": ["src/main.ts"],
     "out": "docs"
   }
-}
+} 
