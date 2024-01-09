@@ -26,9 +26,7 @@ export class UserRegistrationFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  /**
-   * @description Sends the form inputs to the backend.
-   */
+  //This function is responsible for sending the form inputs to the backend
   registerUser(): void {
     this.fetchApiData.userRegistration(this.userData).subscribe((result) => {
       //Logic for a successful user registration goes here
